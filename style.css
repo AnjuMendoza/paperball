@@ -1,0 +1,240 @@
+/*
+ * Assignment 02
+ * CSS FILE
+ */
+
+html {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F2E8CF;
+  color:#386641;
+  display: block;
+
+}
+
+
+
+/*layout for header
+*/
+header {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #386641;
+  color:#F2E8CF;
+  margin-bottom: 30px
+}
+
+h2{
+  color: #F2E8CF;
+  font-size: auto;
+
+}
+
+header .header--banner--logo {
+  height: 2.2rem;
+  padding-right: 0.6rem;
+}
+
+header .header--banner--nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+header nav.header--banner--nav {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+header nav.header--banner--nav ul li a {
+  font-size: 1rem;
+  color: #F2E8CF;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+header nav.header--banner--nav ul li a:hover {
+  color: #fffaee;
+  text-decoration: underline;
+  font-weight: 1000;
+}
+
+/*Layout main flexbox
+*/
+
+main .tennis-three {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;        
+  padding: 0 40px;  
+}
+
+/*All card changes
+*/
+.rafael,
+.federer {
+  margin: 50px 0;    /* only vertical margin */
+  max-width: 450px;
+}
+/*layout for rafael card
+*/
+.rafael {
+  padding: 0;
+  width: 450px;
+  height: 700px;
+  background-color: #F2E8CF;
+  color: #386641;
+  border-radius: 20px;
+  box-shadow: #b08968 0px 8px 40px;
+}
+
+.rafael-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+/*layout for roger card
+*/
+.federer {
+  padding: 0;
+  width: 450px;
+  height: 700px;
+  background-color: #F2E8CF;
+  color: #386641;
+  border-radius: 20px;
+  box-shadow: #b08968 0px 8px 40px;
+}
+
+.federer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+
+/*target other
+*/
+
+.name {
+  color: #251605;
+  padding: 15px;
+}
+
+.resume {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #386641;
+}
+
+.intro-text {
+  margin-top: 10px;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+
+}
+
+
+main img {
+  position: relative;
+  width: 100%;
+  height: 350px; 
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+  
+}
+
+main .btn{
+  display: block;
+  background-color: #251605;
+  color:#F2E8CF;
+  border-radius: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.intro-text  {
+  padding: 0 redm
+}
+
+sub {
+  display: flex;
+
+}
+
+
+
+/*layout for footer
+*/
+
+footer {
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6A994E;
+  color: #f1faee;
+}
+
+footer .footer--nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav.footer--nav {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+footer .footer--nav ul li a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: 900;
+  color: #F2E8CF;
+}
+
+footer nav.footer--nav ul li a:hover {
+  color: #fffaee;
+  text-decoration: underline;
+  font-weight: 1000;
+}
+
+.footer--nav-push {
+  margin-left: auto;
+}
+
+footer .targeth2 {
+  font-size: 1rem;
+}
+
+footer .footer--logo {
+  height: 1.8rem;
+  padding-right: 0.5rem;
+}
