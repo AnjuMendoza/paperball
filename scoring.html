@@ -40,6 +40,14 @@
             <button class="score-btn" onclick="changeScore('home', 0.5)">+</button>
             <button class="score-btn" onclick="changeScore('home', -0.5)">-</button>
           </div>
+
+          <!-- Foul Circles -->
+        <div class="foul-container">
+            <span class="foul-circle" onclick="toggleFoul(this)"></span>
+            <span class="foul-circle" onclick="toggleFoul(this)"></span>
+            <span class="foul-circle" onclick="toggleFoul(this)"></span>
+        </div>
+
         </div>
 
         <!-- AWAY TEAM -->
@@ -50,6 +58,14 @@
             <button class="score-btn" onclick="changeScore('away', 0.5)">+</button>
             <button class="score-btn" onclick="changeScore('away', -0.5)">-</button>
           </div>
+
+          <!-- Foul Circles -->
+        <div class="foul-container">
+            <span class="foul-circle" onclick="toggleFoul(this)"></span>
+            <span class="foul-circle" onclick="toggleFoul(this)"></span>
+            <span class="foul-circle" onclick="toggleFoul(this)"></span>
+        </div>
+
         </div>
 
       </div>
@@ -61,6 +77,40 @@
       </div>
 
     </div>
+
+
+
+
+
+    <!-- Team Settings Box -->
+    <div class="team-settings-container">
+        <h2 class="scoreboard-title">Series</h2>
+            <div class="teams-side-by-side">
+            <!-- Home Team -->
+            <div class="team-block">
+            <label for="homeName">Team 1</label>
+            <input type="text" id="homeName" value="Home">
+            
+            <label for="homeSeries">Series Wins:</label>
+            <input type="number" id="homeSeries" min="0" max="7" value="0">
+            </div>
+
+            <!-- Away Team -->
+            <div class="team-block">
+            <label for="awayName">Team 2</label>
+            <input type="text" id="awayName" value="Away">
+            
+            <label for="awaySeries">Series Wins:</label>
+            <input type="number" id="awaySeries" min="0" max="7" value="0">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
   </main>
 
   <footer>
@@ -90,6 +140,11 @@
         document.getElementById("awayScore").textContent = away.toFixed(1);
       }
     }
+
+        function toggleFoul(circle) {
+    circle.classList.toggle('active');
+    }
+
   </script>
 
 </body>

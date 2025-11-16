@@ -38,7 +38,7 @@
 .team-name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #251605;
+  color: #386641;
 }
 
 .score {
@@ -100,3 +100,79 @@ body {
 main {
   flex: 1;
 }
+
+/*serires*/
+
+/* TEAM SETTINGS BOX */
+.team-settings-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #F2E8CF;
+  border-radius: 20px;
+  box-shadow: #b08968 0px 8px 40px;
+  text-align: center;
+}
+
+.teams-side-by-side {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.team-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffe8c2;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+  min-width: 150px;
+}
+
+.team-block label {
+  font-weight: bold;
+  color: #251605;
+  margin-top: 10px;
+}
+
+.team-block input {
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #386641;
+  width: 100px;      /* current width */
+  text-align: center;
+}
+
+
+/* Make team name inputs wider */
+#homeName,
+#awayName {
+  width: 150px;  /* was 100px */
+}
+
+/* Foul circles */
+.foul-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.foul-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #386641;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.foul-circle.active {
+  background-color: #386641; /* green fill when clicked */
+}
+
