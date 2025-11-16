@@ -80,14 +80,14 @@ main .tennis-three {
 
 /*All card changes
 */
-.rafael,
-.federer {
+.mendoza,
+.zanello {
   margin: 50px 0;    /* only vertical margin */
   max-width: 450px;
 }
 /*layout for rafael card
 */
-.rafael {
+.mendoza {
   padding: 0;
   width: 450px;
   height: 700px;
@@ -97,7 +97,7 @@ main .tennis-three {
   box-shadow: #b08968 0px 8px 40px;
 }
 
-.rafael-content {
+.mendoza-content {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -105,7 +105,7 @@ main .tennis-three {
 
 /*layout for roger card
 */
-.federer {
+.zanello {
   padding: 0;
   width: 450px;
   height: 700px;

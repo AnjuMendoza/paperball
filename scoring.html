@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+
+<head>
+  <title>Scoring</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="scoringstyle.css">
+
+</head>
+
+<body>
+
+  <header>
+    <img class="header--banner--logo" src="tennis.png" alt="logo">
+    <h2>NPA</h2>
+
+    <nav class="header--banner--nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Rules</a></li>
+        <li><a href="scoring.html">Scoring</a></li>
+        <li><a href="#">Champions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="scoreboard-container">
+      <h1 class="scoreboard-title">Scoreboard</h1>
+
+      <!-- HOME TEAM -->
+      <div class="team-row">
+        <span class="team-name">Home</span>
+
+        <div class="btn-group">
+          <button class="score-btn" onclick="changeScore('home', 0.5)">+</button>
+          <button class="score-btn" onclick="changeScore('home', -0.5)">-</button>
+        </div>
+
+        <span class="score" id="homeScore">0</span>
+      </div>
+
+      <!-- AWAY TEAM -->
+      <div class="team-row">
+        <span class="team-name">Away</span>
+
+        <div class="btn-group">
+          <button class="score-btn" onclick="changeScore('away', 0.5)">+</button>
+          <button class="score-btn" onclick="changeScore('away', -0.5)">-</button>
+        </div>
+
+        <span class="score" id="awayScore">0</span>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <img class="footer--logo" src="tennis.png" alt="logo" />
+    <h2 class="targeth2">NPA</h2>
+
+    <nav class="footer--nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Rules</a></li>
+        <li><a href="scoring.html">Scoring</a></li>
+        <li><a href="#">Champions</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script>
+    let home = 0;
+    let away = 0;
+
+    function changeScore(team, amount) {
+      if (team === 'home') {
+        home = Math.max(0, home + amount);
+        document.getElementById("homeScore").textContent = home.toFixed(1);
+      } else {
+        away = Math.max(0, away + amount);
+        document.getElementById("awayScore").textContent = away.toFixed(1);
+      }
+    }
+  </script>
+
+</body>
+</html>

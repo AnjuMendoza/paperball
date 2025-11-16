@@ -1,0 +1,73 @@
+/* SCOREBOARD STYLES */
+    .scoreboard-container {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 30px;
+      background-color: #F2E8CF;
+      border-radius: 20px;
+      box-shadow: #b08968 0px 8px 40px;
+      text-align: center;
+    }
+
+    .scoreboard-title {
+      color: #386641;
+      margin-bottom: 30px;
+    }
+
+    .team-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 25px 0;
+      padding: 15px;
+      background-color: #ffe8c2;
+      border-radius: 12px;
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .team-name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #251605;
+    }
+
+    .score {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #386641;
+      width: 80px;
+      text-align: center;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .score-btn {
+      background-color: #386641;
+      color: #F2E8CF;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      transition: 0.15s ease-in-out;
+    }
+
+    .score-btn:hover {
+      background-color: #2d5235;
+    }
+
+    /* END OF SCOREBOARD STYLES *//* Make body fill the screen and push footer down */
+    body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+
+    main {
+    flex: 1; /* takes remaining space so footer stays at bottom */
+    }
