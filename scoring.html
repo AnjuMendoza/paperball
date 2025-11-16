@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="scoringstyle.css">
-
 </head>
 
 <body>
@@ -31,28 +30,34 @@
     <div class="scoreboard-container">
       <h1 class="scoreboard-title">Scoreboard</h1>
 
-      <!-- HOME TEAM -->
-      <div class="team-row">
-        <span class="team-name">Home</span>
+      <div class="teams-side-by-side">
 
-        <div class="btn-group">
-          <button class="score-btn" onclick="changeScore('home', 0.5)">+</button>
-          <button class="score-btn" onclick="changeScore('home', -0.5)">-</button>
+        <!-- HOME TEAM -->
+        <div class="team-block">
+          <span class="team-name">Home</span>
+          <span class="score" id="homeScore">0</span>
+          <div class="btn-group">
+            <button class="score-btn" onclick="changeScore('home', 0.5)">+</button>
+            <button class="score-btn" onclick="changeScore('home', -0.5)">-</button>
+          </div>
         </div>
 
-        <span class="score" id="homeScore">0</span>
+        <!-- AWAY TEAM -->
+        <div class="team-block">
+          <span class="team-name">Away</span>
+          <span class="score" id="awayScore">0</span>
+          <div class="btn-group">
+            <button class="score-btn" onclick="changeScore('away', 0.5)">+</button>
+            <button class="score-btn" onclick="changeScore('away', -0.5)">-</button>
+          </div>
+        </div>
+
       </div>
 
-      <!-- AWAY TEAM -->
-      <div class="team-row">
-        <span class="team-name">Away</span>
-
-        <div class="btn-group">
-          <button class="score-btn" onclick="changeScore('away', 0.5)">+</button>
-          <button class="score-btn" onclick="changeScore('away', -0.5)">-</button>
-        </div>
-
-        <span class="score" id="awayScore">0</span>
+      <!-- Inning Selector -->
+      <div class="inning-selector">
+        <span class="team-name">Inning:</span>
+        <input type="number" id="inning" min="1" max="5" value="1">
       </div>
 
     </div>
