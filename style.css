@@ -92,7 +92,7 @@ main .tennis-three {
 .mendoza {
   padding: 0;
   width: 450px;
-  height: 700px;
+  height: auto;
   background-color: #F2E8CF;
   color: #386641;
   border-radius: 20px;
@@ -110,7 +110,7 @@ main .tennis-three {
 .zanello {
   padding: 0;
   width: 450px;
-  height: 700px;
+  height: auto;
   background-color: #F2E8CF;
   color: #386641;
   border-radius: 20px;
