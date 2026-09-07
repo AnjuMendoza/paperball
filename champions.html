@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+
+<head>
+  <title>Champions | Paperball</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./champions.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">NPA</span>
+      <span class="brand-sub">Paperball</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="scoring.html">Scoring</a></li>
+        <li><a href="champions.html" class="is-active">Champions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom: 2rem;">
+      <div class="bg-topo" aria-hidden="true"></div>
+      <img class="paper-motif paper-motif--hero" src="assets/paper-ruler.svg" alt="" aria-hidden="true" style="opacity:0.3;" />
+      <div class="hero-inner" data-reveal>
+        <div class="eyebrow-row">
+          <span class="pill pill--outline">Hall of Champions</span>
+        </div>
+        <h1 class="display">Every <em>NPA</em> Championship</h1>
+        <p class="lede">
+          Two rivals, eight series, one league. Scroll to relive every title, from the most
+          recent back to where it all began.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="stats-row" data-champions-summary style="max-width: 900px; margin: 0 auto 3.5rem; border-top: none; padding-top: 0;"></div>
+
+      <ul class="champ-list" data-champions-list></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <span class="brand-mark">NPA</span>
+        <p class="footer-tag">National Paperball Association — Est. 2025</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="scoring.html">Scoring</a></li>
+          <li><a href="champions.html">Champions</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -2,118 +2,171 @@
 <html lang="en-ca">
 
 <head>
-  <!-- Set the page title -->
-  <title>Paperball</title>
-
-  <!-- Set the charset we're using to UTF-8 -->
+  <title>Paperball | National Paperball Association</title>
   <meta charset="utf-8" />
-
-  <!-- Set the screens default zoom / scale to 1 -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Specifies the document mode for Internet Explorer -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="The National Paperball Association — founded November 2025. Scores, standings, and the history of Paperball's champions." />
 
-  <!-- We are using a CSS Reset file to standardize browser default css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="./reset.css" />
-
-  <!-- This is where all of our awesome CSS code goes -->
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <header>
-    
-
-    <!-- <img class="header--banner--logo" src="tennis.png" alt="logo" /> -->
-    <h2>NPA</h2>
-    <nav class="header--banner--nav">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">NPA</span>
+      <span class="brand-sub">Paperball</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Rules</a></li>
+        <li><a href="index.html" class="is-active">Home</a></li>
+        <li><a href="rules.html">Rules</a></li>
         <li><a href="scoring.html">Scoring</a></li>
-        <li><a href="#">Champions</a></li>
+        <li><a href="champions.html">Champions</a></li>
       </ul>
     </nav>
   </header>
-  <!--
 
-    Content
-
-  -->
   <main>
-    <section class="top">
-      <h1>National Paperball Association</h1>
-      <p class="intro-text">Founded in November 2025, Paperball is a fast-paced, strategy-driven 
-        sport that blends baseball with Convergint office supplies. What began as a casual game has 
-        grown into a full league and a passionate community of players. 
-        The NPA celebrates the fun and creativity behind Paperball, offering a fresh take on sports where skill, 
-        quick thinking, and a bit of flair make all the difference.
-      </p>
-    </section>
-    
-    <section>
+    <section class="hero">
+      <div class="bg-topo" aria-hidden="true"></div>
+      <img class="paper-motif paper-motif--hero" src="assets/paper-ruler.svg" alt="" aria-hidden="true" />
 
-      <!--insert header here-->
-
-        <h1 class="top-npa">Top NPA Players</h1>
-      <div class="tennis-three">
-        
-
-        <!--Antonio Mendoza Card-->
-        <div class="mendoza">
-          <div class="mendoza-content">
-            <div class="img">
-              <img src="mendoza.jpg" alt="Image of Antonio Mendoza">
-            </div>
-            
-            <h2 class="name">Antonio Mendoza</h2>
-            <p class="resume">Antonio Mendoza, often hailed as one of the greatest paperball players in history, 
-              has secured an impressive 3 NPA championships, achieving the record for the most 
-              in the sport. His remarkable career is characterized by his relentless determination and 
-              unrivaled prowess on the clay courts. Mendozas's achievements have solidified his status as an 
-              iconic figure in the world of paperball.
-            </p>
-          </div>
+      <div class="hero-inner" data-reveal>
+        <div class="eyebrow-row">
+          <span class="pill pill--outline">Est. November 2025</span>
+          <span class="rule"></span>
         </div>
 
-        <!--roger federer card-->
-        <div class="zanello">
-          
-          <div class="zanello-content">
-            <div class="img">
-              <img src="zanello.jpg" alt="Image of Arthur Zanello">
-            </div>
+        <h1 class="display">National <em>Paperball</em> Association</h1>
 
-          
-            <h2 class="name">Arthur Zanello</h2>
-            <p class ="resume">Arthur Zanello, an iconic figure in paperball, holds the most recent NPA champtionship title, 
-              after defeating Antonio Mendoza in a game 7 series final. Renowned for his elegant playing style and sportsmanship, 
-              Zanello's influence extends beyond the field, making him a global ambassador for the sport. His enduring legacy 
-              embodies the essence of paperball excellence.
-            </p>
-            
+        <p class="lede intro-text">
+          Founded in November 2025, Paperball is a fast-paced, strategy-driven
+          sport that blends baseball with Convergint office supplies. What began as a casual game has
+          grown into a full league and a passionate community of players.
+          The NPA celebrates the fun and creativity behind Paperball, offering a fresh take on sports where skill,
+          quick thinking, and a bit of flair make all the difference.
+        </p>
+
+        <div class="hero-actions">
+          <a href="scoring.html" class="btn btn--primary">Open Scoreboard <span class="arrow">→</span></a>
+          <a href="champions.html" class="btn btn--ghost">See Champions</a>
+        </div>
+
+        <div class="stats-row" data-reveal-group>
+          <div class="stat">
+            <span class="num" data-count="8">0</span>
+            <span class="label">Championship Series</span>
+          </div>
+          <div class="stat">
+            <span class="num" data-count="2">0</span>
+            <span class="label">Legends of the Game</span>
+          </div>
+          <div class="stat">
+            <span class="num" data-count="2025">0</span>
+            <span class="label">Founded</span>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="section">
+      <div class="section-head" data-reveal>
+        <div>
+          <span class="kicker">Top NPA Players</span>
+          <h2>The two legends</h2>
+        </div>
+        <p>Two rivals have defined every era of the league so far — the full history lives on the Champions page.</p>
+      </div>
+
+      <div class="players-grid" data-reveal-group>
+        <article class="player-card">
+          <div class="media">
+            <img src="mendoza.jpg" alt="Image of Antonio Mendoza" />
+          </div>
+          <span class="pill pill--dark tag">Record Holder</span>
+          <div class="body">
+            <h3 class="name">Antonio Mendoza</h3>
+            <p class="resume">
+              Antonio Mendoza, often hailed as one of the greatest paperball players in history,
+              has secured an impressive 3 NPA championships, achieving the record for the most
+              in the sport. His remarkable career is characterized by his relentless determination and
+              unrivaled prowess on the clay courts. Mendozas's achievements have solidified his status as an
+              iconic figure in the world of paperball.
+            </p>
+          </div>
+        </article>
+
+        <article class="player-card">
+          <div class="media">
+            <img src="zanello.jpg" alt="Image of Arthur Zanello" />
+          </div>
+          <span class="pill pill--dark tag">Reigning Champion</span>
+          <div class="body">
+            <h3 class="name">Arthur Zanello</h3>
+            <p class="resume">
+              Arthur Zanello, an iconic figure in paperball, holds the most recent NPA champtionship title,
+              after defeating Antonio Mendoza in a game 7 series final. Renowned for his elegant playing style and sportsmanship,
+              Zanello's influence extends beyond the field, making him a global ambassador for the sport. His enduring legacy
+              embodies the essence of paperball excellence.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--cream-deep);">
+      <div class="section-head" data-reveal>
+        <div>
+          <span class="kicker">How It's Played</span>
+          <h2>Quick glance at the game</h2>
+        </div>
+        <p>The full rulebook is on its way — here's the shape of a match today.</p>
+      </div>
+
+      <div class="chip-strip" data-reveal-group>
+        <div class="chip">
+          <span class="chip-num">5</span>
+          <span class="chip-label"><strong>Innings</strong> per regulation match</span>
+        </div>
+        <div class="chip">
+          <span class="chip-num">3</span>
+          <span class="chip-label"><strong>Fouls</strong> tracked per side</span>
+        </div>
+        <div class="chip">
+          <span class="chip-num">7</span>
+          <span class="chip-label">Best-of-<strong>7</strong> championship series</span>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <!--<img class="footer--logo" src="tennis.png" alt="logo" /> -->
-    <h2 class="targeth2">NPA</h2>
-
-    <nav class="footer--nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Rules</a></li>
-        <li><a href="scoring.html">Scoring</a></li>
-        <li><a href="#">Champions</a></li>
-      </ul>
-    </nav>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <span class="brand-mark">NPA</span>
+        <p class="footer-tag">National Paperball Association — Est. 2025</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="scoring.html">Scoring</a></li>
+          <li><a href="champions.html">Champions</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 
 </html>

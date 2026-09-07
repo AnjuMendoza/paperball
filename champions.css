@@ -1,0 +1,61 @@
+/* Champions page — history list */
+
+.champ-list {
+  max-width: 900px;
+  margin: 0 auto;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.champ-row {
+  display: grid;
+  grid-template-columns: 90px 1fr auto auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.6rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.4s var(--ease), padding-left 0.4s var(--ease);
+}
+
+.champ-row:hover {
+  background: var(--paper);
+  padding-left: 2rem;
+}
+
+.champ-row:first-child {
+  border-top: none;
+}
+
+.champ-index {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--ink-faint);
+}
+
+.champ-series {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  color: var(--ink);
+}
+
+.champ-name {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--forest-deep);
+  text-align: right;
+}
+
+.champ-tag {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .champ-row {
+    grid-template-columns: 50px 1fr;
+    row-gap: 0.5rem;
+  }
+
+  .champ-name { grid-column: 2; text-align: left; }
+  .champ-tag { grid-column: 1 / -1; justify-self: start; }
+}

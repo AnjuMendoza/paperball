@@ -2,151 +2,167 @@
 <html lang="en-ca">
 
 <head>
-  <title>Scoring</title>
+  <title>Scoring | Paperball</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="scoringstyle.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="scoringstyle.css" />
 </head>
 
 <body>
-
-  <header>
-    <img class="header--banner--logo" src="tennis.png" alt="logo">
-    <h2>NPA</h2>
-
-    <nav class="header--banner--nav">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">NPA</span>
+      <span class="brand-sub">Paperball</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">Rules</a></li>
-        <li><a href="scoring.html">Scoring</a></li>
-        <li><a href="#">Champions</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="scoring.html" class="is-active">Scoring</a></li>
+        <li><a href="champions.html">Champions</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="scoreboard-container">
-      <h1 class="scoreboard-title">Scoreboard</h1>
-
-      <div class="teams-side-by-side">
-
-        <!-- HOME TEAM -->
-        <div class="team-block">
-          <span class="team-name" id="homeLabel">Home</span>
-          <span class="score" id="homeScore">0</span>
-          <div class="btn-group">
-            <button class="score-btn" onclick="changeScore('home', -0.5)">-</button>
-            <button class="score-btn" onclick="changeScore('home', 0.5)">+</button>
-          </div>
-
-          <!-- Foul Circles -->
-        <div class="foul-container">
-            <span class="foul-circle" onclick="toggleFoul(this)"></span>
-            <span class="foul-circle" onclick="toggleFoul(this)"></span>
-            <span class="foul-circle" onclick="toggleFoul(this)"></span>
-        </div>
-
-        </div>
-
-        <!-- AWAY TEAM -->
-        <div class="team-block">
-          <span class="team-name" id="awayLabel">Away</span>
-          <span class="score" id="awayScore">0</span>
-          <div class="btn-group">
-            <button class="score-btn" onclick="changeScore('away', -0.5)">-</button>
-            <button class="score-btn" onclick="changeScore('away', 0.5)">+</button>
-          </div>
-
-          <!-- Foul Circles -->
-        <div class="foul-container">
-            <span class="foul-circle" onclick="toggleFoul(this)"></span>
-            <span class="foul-circle" onclick="toggleFoul(this)"></span>
-            <span class="foul-circle" onclick="toggleFoul(this)"></span>
-        </div>
-
-        </div>
-
+    <section class="scoring-hero">
+      <div class="eyebrow-row" style="justify-content:center; max-width:960px; margin:0 auto 1.2rem;">
+        <span class="pill pill--outline">Live Match</span>
       </div>
 
-      <!-- Inning Selector -->
-      <div class="inning-selector">
-        <span class="team-name">Inning:</span>
-        <input type="number" id="inning" min="1" max="5" value="1">
+      <div class="scoreboard-container" data-reveal>
+        <div class="bg-topo dark" aria-hidden="true"></div>
+        <h1 class="scoreboard-title">Scoreboard</h1>
+
+        <div class="teams-side-by-side">
+          <!-- HOME TEAM -->
+          <div class="team-block">
+            <span class="team-name" id="homeLabel">Home</span>
+            <span class="score" id="homeScore">0</span>
+            <div class="btn-group">
+              <button class="score-btn" onclick="changeScore('home', -0.5)" aria-label="Decrease home score">−</button>
+              <button class="score-btn" onclick="changeScore('home', 0.5)" aria-label="Increase home score">+</button>
+            </div>
+
+            <!-- Foul Circles -->
+            <div class="foul-container">
+              <span class="foul-circle" onclick="toggleFoul(this)"></span>
+              <span class="foul-circle" onclick="toggleFoul(this)"></span>
+              <span class="foul-circle" onclick="toggleFoul(this)"></span>
+            </div>
+          </div>
+
+          <span class="vs-divider">vs</span>
+
+          <!-- AWAY TEAM -->
+          <div class="team-block">
+            <span class="team-name" id="awayLabel">Away</span>
+            <span class="score" id="awayScore">0</span>
+            <div class="btn-group">
+              <button class="score-btn" onclick="changeScore('away', -0.5)" aria-label="Decrease away score">−</button>
+              <button class="score-btn" onclick="changeScore('away', 0.5)" aria-label="Increase away score">+</button>
+            </div>
+
+            <!-- Foul Circles -->
+            <div class="foul-container">
+              <span class="foul-circle" onclick="toggleFoul(this)"></span>
+              <span class="foul-circle" onclick="toggleFoul(this)"></span>
+              <span class="foul-circle" onclick="toggleFoul(this)"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inning Selector -->
+        <div class="inning-selector">
+          <span class="team-name">Inning:</span>
+          <input type="number" id="inning" min="1" max="5" value="1">
+        </div>
       </div>
 
-    </div>
-
-
-
-
-
-    <!-- Team Settings Box -->
-    <div class="team-settings-container">
+      <!-- Team Settings Box -->
+      <div class="team-settings-container" data-reveal>
         <h2 class="scoreboard-title">Series</h2>
-            <div class="teams-side-by-side">
-            <!-- Home Team -->
-            <div class="team-block">
+        <div class="teams-side-by-side">
+          <!-- Home Team -->
+          <div class="team-block">
             <label for="homeName">Team 1</label>
             <input type="text" id="homeName" value="Home">
-            
+
             <label for="homeSeries">Series Wins:</label>
             <input type="number" id="homeSeries" min="0" max="7" value="0">
-            </div>
+          </div>
 
-            <!-- Away Team -->
-            <div class="team-block">
+          <!-- Away Team -->
+          <div class="team-block">
             <label for="awayName">Team 2</label>
             <input type="text" id="awayName" value="Away">
-            
+
             <label for="awaySeries">Series Wins:</label>
             <input type="number" id="awaySeries" min="0" max="7" value="0">
-            </div>
+          </div>
         </div>
-    </div>
-
-
-
-
-
-
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <img class="footer--logo" src="tennis.png" alt="logo" />
-    <h2 class="targeth2">NPA</h2>
-
-    <nav class="footer--nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Rules</a></li>
-        <li><a href="scoring.html">Scoring</a></li>
-        <li><a href="#">Champions</a></li>
-      </ul>
-    </nav>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <span class="brand-mark">NPA</span>
+        <p class="footer-tag">National Paperball Association — Est. 2025</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="scoring.html">Scoring</a></li>
+          <li><a href="champions.html">Champions</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
   <script>
     let home = 0;
     let away = 0;
 
+    function bump(el) {
+      el.classList.remove('bump');
+      // force reflow so the animation can restart
+      void el.offsetWidth;
+      el.classList.add('bump');
+    }
+
     function changeScore(team, amount) {
       if (team === 'home') {
         home = Math.max(0, home + amount);
-        document.getElementById("homeScore").textContent = home.toFixed(1);
+        const el = document.getElementById("homeScore");
+        el.textContent = home.toFixed(1);
+        bump(el);
       } else {
         away = Math.max(0, away + amount);
-        document.getElementById("awayScore").textContent = away.toFixed(1);
+        const el = document.getElementById("awayScore");
+        el.textContent = away.toFixed(1);
+        bump(el);
       }
     }
 
-        function toggleFoul(circle) {
-    circle.classList.toggle('active');
+    function toggleFoul(circle) {
+      circle.classList.toggle('active');
     }
 
-    //Attempting to fix labels
-   
     document.getElementById("homeName").addEventListener("input", function () {
       document.getElementById("homeLabel").textContent = this.value || "Home";
     });
@@ -154,8 +170,6 @@
     document.getElementById("awayName").addEventListener("input", function () {
       document.getElementById("awayLabel").textContent = this.value || "Away";
     });
-
-
   </script>
 
 </body>

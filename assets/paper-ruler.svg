@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" fill="none">
+  <defs>
+    <linearGradient id="paperFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf7ec"/>
+      <stop offset="1" stop-color="#e9e1c9"/>
+    </linearGradient>
+    <linearGradient id="paperShade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8cfae"/>
+      <stop offset="1" stop-color="#c3b98f"/>
+    </linearGradient>
+    <linearGradient id="rulerFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a4a34"/>
+      <stop offset="1" stop-color="#1c2416"/>
+    </linearGradient>
+  </defs>
+
+  <!-- crumpled paper ball -->
+  <g transform="translate(150,160)">
+    <path d="M60 190 C10 150 -10 70 40 30 C80 -10 150 -18 200 6
+             C230 -22 300 -14 320 30 C360 40 380 100 350 140
+             C380 175 360 230 310 240 C300 275 240 300 195 280
+             C150 305 80 290 60 250 C25 245 10 215 60 190 Z"
+          fill="url(#paperFace)" stroke="#c9bd97" stroke-width="2"/>
+    <path d="M60 190 C90 170 120 165 150 178 C170 150 210 150 235 170
+             C265 155 300 165 310 190" stroke="url(#paperShade)" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6"/>
+    <path d="M95 60 C130 40 190 44 215 70" stroke="url(#paperShade)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
+    <path d="M120 230 C160 245 210 240 240 220" stroke="url(#paperShade)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
+    <path d="M250 60 C275 85 280 120 260 150" stroke="url(#paperShade)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.45"/>
+  </g>
+
+  <!-- ruler -->
+  <g transform="translate(430,120) rotate(24)">
+    <rect x="0" y="0" width="430" height="58" rx="10" fill="url(#rulerFace)"/>
+    <rect x="0" y="0" width="430" height="58" rx="10" fill="none" stroke="#0d120a" stroke-width="1.5" opacity="0.6"/>
+    <!-- tick marks -->
+    <g stroke="#f3efe3" stroke-width="2" opacity="0.85">
+      <line x1="18" y1="8" x2="18" y2="50"/>
+      <line x1="46" y1="16" x2="46" y2="42"/>
+      <line x1="74" y1="16" x2="74" y2="42"/>
+      <line x1="102" y1="8" x2="102" y2="50"/>
+      <line x1="130" y1="16" x2="130" y2="42"/>
+      <line x1="158" y1="16" x2="158" y2="42"/>
+      <line x1="186" y1="8" x2="186" y2="50"/>
+      <line x1="214" y1="16" x2="214" y2="42"/>
+      <line x1="242" y1="16" x2="242" y2="42"/>
+      <line x1="270" y1="8" x2="270" y2="50"/>
+      <line x1="298" y1="16" x2="298" y2="42"/>
+      <line x1="326" y1="16" x2="326" y2="42"/>
+      <line x1="354" y1="8" x2="354" y2="50"/>
+      <line x1="382" y1="16" x2="382" y2="42"/>
+      <line x1="410" y1="16" x2="410" y2="42"/>
+    </g>
+    <circle cx="18" cy="29" r="2.4" fill="#f3efe3" opacity="0.7"/>
+    <circle cx="102" cy="29" r="2.4" fill="#f3efe3" opacity="0.7"/>
+    <circle cx="186" cy="29" r="2.4" fill="#f3efe3" opacity="0.7"/>
+    <circle cx="270" cy="29" r="2.4" fill="#f3efe3" opacity="0.7"/>
+    <circle cx="354" cy="29" r="2.4" fill="#f3efe3" opacity="0.7"/>
+  </g>
+
+  <!-- small torn paper scrap -->
+  <g transform="translate(560,360)">
+    <path d="M0 20 C10 0 40 -8 60 4 C85 -6 110 6 112 28 C130 34 128 62 108 66
+             C104 84 76 92 58 80 C36 92 8 82 6 62 C-10 56 -8 30 0 20 Z"
+          fill="url(#paperFace)" stroke="#c9bd97" stroke-width="1.6"/>
+  </g>
+</svg>
